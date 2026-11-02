@@ -26,30 +26,6 @@ body {
   min-height: 100dvh;
 }
 
-[data-page-host] {
-  display: grid;
-  min-height: 100dvh;
-  padding: 2rem;
-  place-items: center;
-  text-align: center;
-}
-
-[data-page-host] p {
-  margin: 0;
-  color: #23694f;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-[data-page-host] h1 {
-  margin: 1rem 0 0;
-  color: #173d30;
-  font-size: clamp(2rem, 8vw, 4rem);
-  line-height: 1.05;
-}
-
 noscript {
   display: block;
   padding: 1rem;

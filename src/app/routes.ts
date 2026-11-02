@@ -1,9 +1,10 @@
 import type { RouteDefinition } from '@open-cells/core/types';
+import { routeNames } from './interop/navigation-contract.js';
 
 export const routes: RouteDefinition[] = [
   {
     path: '/',
-    name: 'root',
+    name: routeNames.root,
     component: 'dashboard-page',
     action: async () => {
       await import('../pages/dashboard/dashboard-page.js');
@@ -11,7 +12,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/dashboard',
-    name: 'dashboard',
+    name: routeNames.dashboard,
     component: 'dashboard-page',
     action: async () => {
       await import('../pages/dashboard/dashboard-page.js');
@@ -19,7 +20,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/products',
-    name: 'products',
+    name: routeNames.products,
     component: 'products-page',
     action: async () => {
       await import('../pages/products/products-page.js');
@@ -27,7 +28,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/products/:barcode',
-    name: 'product-detail',
+    name: routeNames.productDetail,
     component: 'product-detail-page',
     action: async () => {
       await import('../pages/product-detail/product-detail-page.js');
@@ -35,7 +36,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/compare',
-    name: 'compare',
+    name: routeNames.compare,
     component: 'compare-page',
     action: async () => {
       await import('../pages/compare/compare-page.js');
@@ -43,7 +44,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/collections',
-    name: 'collections',
+    name: routeNames.collections,
     component: 'collections-page',
     action: async () => {
       await import('../pages/collections/collections-page.js');
@@ -51,7 +52,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/insights',
-    name: 'insights',
+    name: routeNames.insights,
     component: 'insights-page',
     action: async () => {
       await import('../pages/insights/insights-page.js');
@@ -59,7 +60,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/scan',
-    name: 'scan',
+    name: routeNames.scan,
     component: 'scan-page',
     action: async () => {
       await import('../pages/scan/scan-page.js');
@@ -67,7 +68,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/login',
-    name: 'login',
+    name: routeNames.login,
     component: 'login-page',
     action: async () => {
       await import('../pages/login/login-page.js');
@@ -75,7 +76,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/register',
-    name: 'register',
+    name: routeNames.register,
     component: 'register-page',
     action: async () => {
       await import('../pages/register/register-page.js');
@@ -83,7 +84,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/forgot-password',
-    name: 'forgot-password',
+    name: routeNames.forgotPassword,
     component: 'forgot-password-page',
     action: async () => {
       await import('../pages/forgot-password/forgot-password-page.js');
@@ -91,7 +92,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/reset-password',
-    name: 'reset-password',
+    name: routeNames.resetPassword,
     component: 'reset-password-page',
     action: async () => {
       await import('../pages/reset-password/reset-password-page.js');
@@ -99,7 +100,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/onboarding',
-    name: 'onboarding',
+    name: routeNames.onboarding,
     component: 'onboarding-page',
     action: async () => {
       await import('../pages/onboarding/onboarding-page.js');
@@ -107,7 +108,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/profile',
-    name: 'profile',
+    name: routeNames.profile,
     component: 'profile-page',
     action: async () => {
       await import('../pages/profile/profile-page.js');
@@ -115,7 +116,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/settings',
-    name: 'settings',
+    name: routeNames.settings,
     component: 'settings-page',
     action: async () => {
       await import('../pages/settings/settings-page.js');
@@ -123,7 +124,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/notifications',
-    name: 'notifications',
+    name: routeNames.notifications,
     component: 'notifications-page',
     action: async () => {
       await import('../pages/notifications/notifications-page.js');
@@ -131,7 +132,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/help',
-    name: 'help',
+    name: routeNames.help,
     component: 'help-page',
     action: async () => {
       await import('../pages/help/help-page.js');
@@ -139,7 +140,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/error',
-    name: 'error',
+    name: routeNames.error,
     component: 'error-page',
     action: async () => {
       await import('../pages/error/error-page.js');
@@ -147,7 +148,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/not-found',
-    name: 'not-found',
+    name: routeNames.notFound,
     component: 'not-found-page',
     notFound: true,
     action: async () => {
