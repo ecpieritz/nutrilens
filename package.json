@@ -1,0 +1,13 @@
+{
+  "name": "nutrilens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Food intelligence for packaged-food discovery and comparison.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=24.18.1 <25",
+    "npm": ">=10.8.2"
+  },
+  "packageManager": "npm@10.8.2"
+}
