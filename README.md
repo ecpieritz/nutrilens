@@ -25,7 +25,11 @@ npm run dev
 
 ## Project status
 
-The Open Cells application is bootstrapped with a minimal root page. Product
-routes and lazy-loaded page hosts are intentionally reserved for the next
-implementation step in the semantic commit roadmap.
+The application foundation includes Open Cells bootstrap and hash routing,
+lazy-loaded Lit page hosts, and the typed bridge used by Vue custom elements.
+Feature screens are still placeholders and will be implemented incrementally.
+
+See the [architecture overview](docs/architecture/README.md) and
+[ADR-001](docs/architecture/decisions/001-open-cells-lit-vue-interop.md) for the
+framework boundaries and data-flow decisions.
 
