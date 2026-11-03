@@ -5,4 +5,3 @@ startApp({
   routes,
   mainNode: 'app-content',
 });
-

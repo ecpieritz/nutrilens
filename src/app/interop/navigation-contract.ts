@@ -56,4 +56,3 @@ export const isNavigationRequest = (value: unknown): value is NavigationRequest 
     (candidate.params === undefined || hasValidParameters(candidate.params))
   );
 };
-

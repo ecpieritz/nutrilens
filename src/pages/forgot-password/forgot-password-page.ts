@@ -5,4 +5,3 @@ import { OpenCellsPageHost } from '../shared/open-cells-page-host.js';
 export class ForgotPasswordPage extends OpenCellsPageHost {
   protected readonly pageTitle = 'Forgot your password?';
 }
-

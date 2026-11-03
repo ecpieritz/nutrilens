@@ -1,10 +1,7 @@
 import { PageController } from '@open-cells/page-controller';
 import { html, LitElement } from 'lit';
 import { OpenCellsVueBridge } from '../../app/interop/open-cells-vue-bridge.js';
-import {
-  VUE_PAGE_VIEW_TAG,
-  type VuePageViewElement,
-} from '../../app/interop/vue-page-view.js';
+import { VUE_PAGE_VIEW_TAG, type VuePageViewElement } from '../../app/interop/vue-page-view.js';
 
 export abstract class OpenCellsPageHost extends LitElement {
   readonly pageController = new PageController(this);
@@ -14,21 +11,21 @@ export abstract class OpenCellsPageHost extends LitElement {
   private active = false;
   private bridge?: OpenCellsVueBridge;
 
-  connectedCallback(): void {
+  override connectedCallback(): void {
     super.connectedCallback();
     this.bridge?.connect();
   }
 
-  disconnectedCallback(): void {
+  override disconnectedCallback(): void {
     this.bridge?.disconnect();
     super.disconnectedCallback();
   }
 
-  protected createRenderRoot(): HTMLElement | DocumentFragment {
+  protected override createRenderRoot(): HTMLElement | DocumentFragment {
     return this;
   }
 
-  protected firstUpdated(): void {
+  protected override firstUpdated(): void {
     const vueElement = this.querySelector<VuePageViewElement>(VUE_PAGE_VIEW_TAG);
 
     if (!vueElement) {
@@ -50,7 +47,7 @@ export abstract class OpenCellsPageHost extends LitElement {
     this.bridge?.setPageActive(false);
   }
 
-  render() {
+  override render() {
     const pageName = this.localName.replace(/-page$/, '');
 
     return html`

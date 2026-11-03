@@ -124,4 +124,3 @@ declare global {
     [VUE_PAGE_VIEW_TAG]: VuePageViewElement;
   }
 }
-

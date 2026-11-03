@@ -5,4 +5,3 @@ import { OpenCellsPageHost } from '../shared/open-cells-page-host.js';
 export class OnboardingPage extends OpenCellsPageHost {
   protected readonly pageTitle = 'Welcome to NutriLens';
 }
-
