@@ -72,44 +72,63 @@ const VuePageView = defineCustomElement({
       :host {
         display: block;
         min-height: 100dvh;
+        background: var(--color-background);
+        color: var(--color-text-primary);
+        font-family: var(--font-family-sans);
       }
 
       section {
         display: grid;
         min-height: 100dvh;
-        padding: 2rem;
+        padding: var(--content-gutter);
         place-items: center;
         text-align: center;
       }
 
       .eyebrow {
         margin: 0;
-        color: #23694f;
-        font: 700 0.875rem/1.2 Inter, ui-sans-serif, system-ui, sans-serif;
-        letter-spacing: 0.08em;
+        color: var(--color-action);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--letter-spacing-eyebrow);
+        line-height: var(--line-height-heading);
         text-transform: uppercase;
       }
 
       h1 {
-        margin: 1rem 0 0;
-        color: #173d30;
-        font: 700 clamp(2rem, 8vw, 4rem)/1.05 Inter, ui-sans-serif, system-ui, sans-serif;
+        margin: var(--space-4) 0 0;
+        color: var(--color-text-primary);
+        font-size: var(--font-size-display);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--line-height-tight);
       }
 
       button {
-        margin-top: 2rem;
-        border: 1px solid #23694f;
-        border-radius: 0.5rem;
-        background: #ffffff;
-        color: #173d30;
+        min-height: var(--control-height-md);
+        margin-top: var(--space-8);
+        border: var(--border-width) solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-background-elevated);
+        color: var(--color-action);
         cursor: pointer;
-        font: 600 1rem/1.2 Inter, ui-sans-serif, system-ui, sans-serif;
-        padding: 0.75rem 1rem;
+        font-family: inherit;
+        font-size: var(--font-size-md);
+        font-weight: var(--font-weight-semibold);
+        line-height: var(--line-height-heading);
+        padding: var(--space-3) var(--space-4);
+        transition:
+          border-color var(--duration-fast) var(--ease-standard),
+          background-color var(--duration-fast) var(--ease-standard);
+      }
+
+      button:hover {
+        border-color: var(--color-action);
+        background: var(--color-action-subtle);
       }
 
       button:focus-visible {
-        outline: 3px solid #e36c54;
-        outline-offset: 3px;
+        outline: none;
+        box-shadow: var(--focus-ring);
       }
     `,
   ],
